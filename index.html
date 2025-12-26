@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostellers Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="image22.avif" alt="Education Logo">
+                <h2>Hostellers Website</h2>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    
+                    <li><a href="#courses">Hostals</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#gallery">Feedback</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Background Image Tag: Replace 'college-bg.jpg' with your desired image path -->
+        <img src="image2.webp" alt="College Background" class="hero-bg-image">
+        
+        <div class="hero-bg-overlay"></div> <!-- Enhanced overlay for black shade -->
+        
+        <div class="hero-content">
+            <h1>Hostel Search by City: Affordable Stays
+            <p>Search and book budget hostel rooms in top cities like Kakinada, Vizag, or favorite spots. 
+                Filter by price, location, and amenities for your perfect stay.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+        <!-- Premium touch: Subtle scroll indicator -->
+        <div class="scroll-indicator">
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1>Find Your Hostel</h1>
+        <div class="select-wrapper">
+            <select id="city-select" class="select-dropdown">
+                <option value="">Select a City</option>
+                <option value="all">All Cities</option>
+                <option value="kakinada">Kakinada</option>
+                <option value="vizag">Vizag</option>
+                <option value="rajamundry">Rajamundry</option>
+                <option value="tirupati">Tirupati</option>
+                
+            </select>
+        </div>
+
+        <section id="kakinada-section" class="hostel-section hidden">
+            <h2>Kakinada Hostels</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="image3.jpg" alt="Hostel 1">
+                    <h3>Bargavi Durga Boys Hostal</h3>
+                    <p>Address: 19-6, Kannayya Kapu Nagar, Kakinada</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="https://share.google/G15BZFNsIMxo2zbLp" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image4.jpg" alt="Hostel 2">
+                    <h3>Shri Raghavendra Men's Hostel (P.G)</h3>
+                    <p>Address: NTU Kakinada Nagamallithota Junction</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="https://share.google/fhI1xxF8yMhsoSylg" onclick="event.preventDefault(); window.location.href=this.href;" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image5.jpg" alt="Hostel 3">
+                    <h3>Sunrise boys hostel</h3>
+                    <p>Address: 789 Oak St, Kakinada</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image6.jpg" alt="Hostel 4">
+                    <h3>Svs Luxury Mens Hostel</h3>
+                    <p>Address: X6MR+845, Nagamalli Thota, Ramanayyapeta, Kakinada</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image7.jpg" alt="Hostel 5">
+                    <h3>Sai Anjana Students & Working Women Hostel</h3>
+                    <p>Address: 202 Maple St, Kakinada</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vizag-section" class="hostel-section hidden">
+            <h2>Vizag Hostels</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="image8.webp" alt="Hostel 6">
+                    <h3>Best Paying Guest Hostels in vizag</h3>
+                    <p>Address:  P8CM+4G4, RK Duplex, Beach Rd, Dutch Layout, Visakhapatnam</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image9.webp" alt="Hostel 7">
+                    <h3>Sai Durga Boys Hostel Vizag</h3>
+                    <p>Address: 404 Hill St, Vizag</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="iamge10.jpg" alt="Hostel 8">
+                    <h3>MODERN DLX BOYS / LADIES HOSTEL</h3>
+                    <p>Address: 505 Central Ave, Vizag</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image11.webp" alt="Hostel 9">
+                    <h3>DESTINY BOYS HOSTEL</h3>
+                    <p>Address: 606 River Ln, Vizag</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image12.webp" alt="Hostel 10">
+                    <h3>Sri Krishna PG</h3>
+                    <p>Address: 707 Park St, Vizag</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rajamundry-section" class="hostel-section hidden">
+            <h2>Rajamundry Hostels</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="image19.jpg" alt="Hostel 11">
+                    <h3>Sri Krishna PG</h3>
+                    <p>Address: 808 Tech Park</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image20.jpg" alt="Hostel 12">
+                    <h3>KalyaniBoys hostel</h3>
+                    <p>Address: 909 Fort Rd</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image21.jpg" alt="Hostel 14">
+                    <h3>Freedom Boys Hostel</h3>
+                    <p>Address: 1111 Silicon Valley, Hyderabad</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="tirupati-section" class="hostel-section hidden">
+            <h2>Tirupati Hostels</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="image16.jpg" alt="Hostel 16">
+                    <h3>Youth Hostel Tirupati</h3>
+                    <p>Address: 1313 Beach Rd</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image17.jpg" alt="Hostel 17">
+                    <h3>Sky Boys Hostel</h3>
+                    <p>Address: 1414 Market St, </p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image18.jpg" alt="Hostel 18">
+                    <h3>SRN Women's Hostel</h3>
+                    <p>Address: 1515 River Rd</p>
+                    <div class="buttons">
+                        <button class="book-now">Book Now</button>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+    </div>
+       <script src="script.js"></script>
+    </body>
+    </html>

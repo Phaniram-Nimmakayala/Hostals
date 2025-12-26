@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ---------- Topbar (Premium Addition: Subtle header bar for contact/social) ---------- */
+.topbar {
+    background-color: rgba(0, 0, 0, 0.9); /* Black shade for premium depth */
+    color: #fff;
+    padding: 8px 60px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.topbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(106, 27, 154, 0.1), rgba(0, 0, 0, 0.2)); /* Subtle purple pigmentation */
+    z-index: 1;
+}
+
+.topbar-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    color: #e0e0e0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #8e24aa; /* Purple accent */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.social-links a:hover {
+    color: #8e24aa; /* Purple pigmentation on hover */
+}
+
+.social-links a:hover::after {
+    width: 100%;
+}
+
+/* ---------- Navbar (Enhanced for Premium Look) ---------- */
+header {
+    background: rgba(0, 0, 0, 0.95); /* Black shade with transparency */
+    backdrop-filter: blur(10px); /* Premium glass-morphism effect */
+    padding: 15px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 45px; /* Slightly larger for premium feel */
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logo h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px; /* Premium spacing */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px; /* Increased gap for elegance */
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8e24aa, #ab47bc); /* Purple gradient underline */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #8e24aa; /* Purple pigmentation */
+    text-shadow: 0 0 10px rgba(142, 36, 170, 0.5); /* Glow effect for premium */
+}
+
+/* Mobile Menu Toggle (Premium Responsiveness) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #8e24aa;
+}
+
+/* ---------- Hero Section (Enhanced with Image Tag for Background) ---------- */
+.hero {
+    background: none; /* Remove CSS background; now using <img> tag */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 100px;
+    position: relative;
+    overflow: hidden; /* For premium clipping */
+}
+
+/* Background Image Tag Styling: Full-screen, fixed for parallax base */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the section without distortion */
+    z-index: 0; /* Behind overlay and content */
+    filter: brightness(0.8) contrast(1.1); /* Subtle premium filter to enhance image under black shade */
+    transition: transform 0.1s ease; /* Smooth parallax */
+}
+
+/* Enhanced Black Shade Overlay (Positioned over the image tag) */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient( rgba(64, 64, 64, 0.85)), /* Stronger black shade gradient for depth */
+        linear-gradient(135deg, rgba(101, 8, 159, 0.15)); /* Subtle purple pigmentation */
+    z-index: 1; /* Above image, below content */
+    animation: subtlePulse 6s ease-in-out infinite alternate; /* Premium breathing effect for immersion */
+}
+
+@keyframes subtlePulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.95;
+    }
+}
+
+/* Premium Vignette for Edgy Black Shade Focus (Over image and overlay) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.4), transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.3), transparent 60%),
+        radial-gradient(ellipse at top, rgba(0, 0, 0, 0.6), transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.6), transparent 50%); /* Enhanced black vignette for premium cinematic feel */
+    z-index: 1; /* Same as overlay for blending */
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out; /* Subtle entrance animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 56px; /* Larger for impact */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7); /* Stronger shadow for better readability over black shade */
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    color: #f0f0f0; /* Brighter for contrast against deeper black */
+    margin-bottom: 40px;
+    font-size: 18px; /* Larger font for premium readability */
+    line-height: 1.7;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.btn {
+    background: linear-gradient(135deg, #8e24aa, #ab47bc); /* Purple gradient for premium button */
+    color: #fff;
+    padding: 15px 35px; /* Larger padding */
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape for modern premium look */
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4); /* Purple shadow */
+    position: relative;
+    overflow: hidden;
+    z-index: 3; /* Ensure above overlay */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
+    background: linear-gradient(135deg, #7b1fa2, #9c27b0); /* Darker purple on hover */
+}
+
+/* Premium Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8e24aa;
+    font-size: 24px;
+    animation: bounce 2s infinite;
+    z-index: 2;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Media Queries for Responsiveness (Premium Mobile Optimization) */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .topbar-content {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hero {
+        padding: 0 20px;
+        height: 80vh;
+        text-align: center;
+    }
+
+    .hero-bg-image {
+        object-position: center; /* Ensure centered on mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .hero-bg-overlay {
+        background: linear-gradient(rgba(75, 74, 74, 0.85), rgba(0, 0, 0, 0.9)); /* Even stronger black on small screens */
+    }
+
+    .hero-bg-image {
+        filter: brightness(0.7) contrast(1.2); /* Adjust filter for mobile visibility */
+    }
+}
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4a5568;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.select-dropdown {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff 0%, #f7fafc 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.select-dropdown:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.hostel-section {
+    margin-bottom: 50px;
+    transition: all 0.5s ease;
+}
+
+.hostel-section.hidden {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2d3748;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 20px 5px;
+    font-size: 1.4rem;
+    color: #2d3748;
+}
+
+.card p {
+    padding: 0 20px 15px;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.buttons {
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-now {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.book-now:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.learn-more {
+    color: #667eea;
+    text-decoration: none
+
+}
